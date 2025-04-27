@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import styles from './faq.module.css';
-import Image from 'next/image';
 
 interface FaqItemProps {
   question: string;

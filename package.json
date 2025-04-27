@@ -1,6 +1,6 @@
 {
   "name": "climatase",
-  "homepage": "https://KudenikovNS.github.io/climatise",
+  "homepage": "https://KudenikovNS.github.io/climatase",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,8 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build && npm run export",
-    "deploy": "gh-pages -d out"
+    "predeploy": "npm run build && cp public/.nojekyll out/",
+    "deploy": "gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "next": "15.2.3",

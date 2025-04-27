@@ -7,8 +7,6 @@ import Problem from "@/components/problem/problem";
 import HowItWork from "@/components/how-it-work/how-it-work";
 import Resources from "@/components/resources/resources";
 import FAQ from "@/components/faq/faq";
-import Footer from "@/components/footer/footer";
-
 
 export default function Home() {
   return (
@@ -39,7 +37,7 @@ export default function Home() {
           <Resources />
         </div>
 
-      {/*   <FAQ /> */}
+        <FAQ />
 
       </main>
     </>

@@ -39,12 +39,10 @@ export default function RegulationsPage() {
   
   const [charIndices, setCharIndices] = useState<number[]>([]);
   const [text3CharIndices, setText3CharIndices] = useState<number[]>([]);
-  const runningTextRef = useRef<HTMLDivElement>(null);
   const text3Ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let totalChars = text1.length + text2.length;
-    const initialIndices: number[] = [];
+    const totalChars = text1.length + text2.length;
     
     const addIndicesWithDelay = (index: number) => {
       if (index > totalChars) return;
@@ -61,7 +59,6 @@ export default function RegulationsPage() {
     const handleScroll = () => {
       if (!text3Ref.current) return;
       
-      const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
       const text3Position = text3Ref.current.getBoundingClientRect().top;
       

@@ -59,7 +59,7 @@ export default function RootLayout({
     `}>
         {children}
         <div style={{ display: "flex", justifyContent: "center", gap: "40px", width: "100%" }}>
-         {/*  <Footer /> */}
+          <Footer />
         </div>
       </body>
     </html>

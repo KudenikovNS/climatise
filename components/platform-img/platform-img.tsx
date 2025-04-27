@@ -37,12 +37,15 @@ export default function PlatformImg() {
       rafRef.current = requestAnimationFrame(updateScrollPosition);
     };
 
+    // Сохраняем текущий элемент в локальную переменную
+    const currentSectionRef = sectionRef.current;
+
     window.addEventListener('scroll', handleScroll, { passive: true });
     updateScrollPosition();
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentSectionRef) {
+        observer.unobserve(currentSectionRef);
       }
       
       window.removeEventListener('scroll', handleScroll);
