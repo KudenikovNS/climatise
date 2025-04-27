@@ -1,0 +1,209 @@
+.section {
+  position: relative;
+}
+
+.containerTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+  .title {
+    font-family: var(--font-dm-sans-medium), sans-serif;
+    font-size: 2.6rem;
+    line-height: .9;
+    font-weight: 500;
+
+    @media (width <= 640px) {
+      font-size: 3.2rem;
+    }
+  }
+}
+
+.wordWrapper {
+  font-family: var(--font-dm-sans-medium), sans-serif;
+  font-size: 2.6rem;
+  color: var(--blue);
+  font-weight: 700;
+  height: 1.5em;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  text-align: center;
+
+  .wordContainer {
+    position: relative;
+    height: 1.5em;
+    width: 100%;
+    overflow: hidden;
+
+    .wordCycle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 300%;
+      animation: cycleWords 9s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+
+      .word {
+        height: 33.333%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-dm-sans-medium), sans-serif;
+        font-size: 2.6rem;
+        font-weight: 700;
+        color: var(--blue);
+      }
+    }
+  }
+}
+
+@keyframes cycleWords {
+
+  0%,
+  25% {
+    transform: translateY(0);
+  }
+
+  33.33%,
+  58.33% {
+    transform: translateY(-33.333%);
+  }
+
+  66.66%,
+  91.66% {
+    transform: translateY(-66.666%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.analyticsContainer {
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+
+  @media (width <= 1200px) {
+    min-width: 100%;
+  }
+
+  @media (width <= 640px) {
+    padding-block: 4rem;
+    justify-content: center;
+  }
+
+  .scopeImage,
+  .progressImage,
+  .showImage,
+  .graphImage {
+    border: .035rem solid #cdcdcdb0;
+    border-radius: .3em;
+  }
+  
+
+
+  .leftColumn {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+
+    @media (width <= 1024px) {
+      
+    }
+
+    .progressImage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(95%, 20%);
+
+      @media (width <= 640px) {
+        top: 42%; 
+        left: 70%;
+        transform: translate(-50%, -35%);
+        z-index: 10;
+      }
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .rightColumn {
+    display: flex;
+    flex-direction: column;
+
+    @media (width <= 640px) {
+      display: none;
+    }
+
+    .showImage {
+      position: relative;
+    }
+
+    .graphImage {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateY(22%);
+    }
+  }
+}
+
+
+@media (width <= 1024px) {
+  .scopeImage {
+    width: 250px;
+    height: auto;
+  }
+  
+  .progressImage {
+    width: 180px;
+    height: auto;
+  }
+  
+  .showImage {
+    width: 180px;
+    height: auto;
+  }
+  
+  .graphImage {
+    width: 380px;
+    height: auto;
+  }
+}
+
+@media (width <= 798px) {
+  .scopeImage {
+    width: 180px;
+  }
+  
+  .progressImage {
+    width: 150px;
+  }
+  
+  .showImage {
+    width: 130px;
+  }
+  
+  .graphImage {
+    width: 300px;
+  }
+}

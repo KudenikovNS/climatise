@@ -1,0 +1,57 @@
+/* Базовый стиль для всех кнопок */
+.link {
+  font-family: var(--font-inter-medium), sans-serif;
+  font-size: .5rem;
+  border-radius: 999px;
+  padding-block: .5rem;
+  padding-inline: 1rem;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  @media (width <= 991px) {
+    font-size: 1rem;
+  }
+
+  @media (width <= 479px) {
+    font-size: 2rem;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+
+    .textWrapper {
+      transform: translateY(-50%);
+    }
+  }
+
+  .textContainer {
+    overflow: hidden;
+    height: 1.2em;
+
+    .textWrapper {
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+
+      .text {
+        word-break: break-all;
+      }
+    }
+  }
+}
+
+
+.primary {
+  color: var(--text-white);
+  background-color: var(--blue);
+}
+
+.secondary {
+  color: var(--text-black);
+  background-color: var(--bg);
+  border: .025em solid #e6e6e6;
+}
+
+    

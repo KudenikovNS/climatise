@@ -1,42 +1,353 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+:focus {
+  outline: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
 }
 
-* {
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-size: 2.06vw;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+figure {
+  margin: 0;
+}
+
+form {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  vertical-align: middle;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  overflow: visible;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  overflow: visible;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
+  appearance: none;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
   margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+
+:root {
+  --text-primary: #333;
+  --text-secondary: #595959;
+  --text-tertiary: #272727;
+
+  --text-white: #fff;
+  --text-black: #000;
+
+  --blue: #3076e2;
+  --bg: #fff;
+
+  --font-size-ss: 12px;
+  --font-size-s: 14px;
+  --font-size-m: 16px;
+  --font-size-l: 20px;
+  --font-size-h4: 24px;
+  --font-size-h3: 32px;
+  --font-size-h2: 38px;
+  --font-size-h1: 60px;
+  --font-size-hero: 70px;
+
+  --font-line-height-100: 1;
+  --font-line-height-125: 1.25;
+  --font-line-height-130: 1.3;
+  --font-line-height-140: 1.4;
+  --font-line-height-150: 1.5;
+
+}
+
+body {
+  font-family: var(--font-inter-regular);
+  font-size: 2.06vw;
+  color: var(--text-primary);
+  line-height: var(--font-line-height-130);
+  background-color: var(--bg);
+}
+
+:root {
+  --sizeFactor: 1;
+  --fontSize6XL: calc(var(--sizeFactor) * 3.25rem /* 52px */);
+  --fontSize5XL: calc(var(--sizeFactor) * 3rem /* 48px */);
+  --fontSize4XL: calc(var(--sizeFactor) * 2.25rem /* 36px */);
+  --fontSize3XL: calc(var(--sizeFactor) * 1.875rem /* 30px */);
+  --fontSize2XL: calc(var(--sizeFactor) * 1.5rem /* 24px */);
+  --fontSizeXL: calc(var(--sizeFactor) * 1.25rem /* 20px */);
+  --fontSizeL: calc(var(--sizeFactor) * 1.125rem /* 18px */);
+  --fontSizeBase: calc(var(--sizeFactor) * 1rem; /* 16px */);
+  --fontSizeSM: calc(var(--sizeFactor) * 0.875rem /* 14px */);
+  --fontSizeXS: calc(var(--sizeFactor) * 0.75rem /* 12px */);
+  --fontSize2XS: calc(var(--sizeFactor) *.5rem /* 8px */);
+  --fontDefaultLH: 1.2;
+  --gray--light-rgb: 249, 250, 252;
 }

@@ -1,0 +1,38 @@
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-33.333%));
+  }
+}
+
+.standardsCarousel {
+  width: 95%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.standardsTrack {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 25s linear infinite;
+  will-change: transform;
+}
+
+.standardItem {
+  font-family: var(--font-dm-sans-medium), sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 0 3rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .standardItem {
+    font-size: 35px;
+  }
+}

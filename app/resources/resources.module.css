@@ -1,0 +1,147 @@
+.section {
+  padding: 4rem 4rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-family: var(--font-dm-sans-medium), sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.viewAll {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--blue);
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-family: var(--font-inter-regular), sans-serif;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.viewAll:hover {
+  background-color: #0056b3;
+}
+
+.arrow {
+  margin-left: 0.5rem;
+}
+
+.resourcesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.resourceCard {
+  border-radius: .875em;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background-color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.resourceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.imageContainer {
+  position: relative;
+  min-height: 350px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.resourceImage {
+  object-fit: cover;
+}
+
+.badges {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding-block: .8rem;
+  padding-inline: .8rem;
+  z-index: 2;
+}
+
+.typeBadge {
+  background-color: white;
+  color: #333;
+  padding: 0.2rem 0.2rem;
+  border-radius: 1rem;
+  font-size: .35em;
+  font-weight: 500;
+  font-family: var(--font-inter-regular), sans-serif;
+}
+
+.timeBadge {
+  background-color: white;
+  color: #333;
+  padding: 0.2rem 0.2rem;
+  border-radius: 1rem;
+  font-size: .35em;
+  font-weight: 500;
+  font-family: var(--font-inter-regular), sans-serif;
+}
+
+.content {
+  grid-column-gap: .4em;
+  grid-row-gap: .4em;
+  text-align: left;
+  background-color: #fff;
+  border-radius: .65em;
+  flex-flow: column;
+  padding: .5em .6em;
+  display: flex;
+  position: absolute;
+  bottom: .35em;
+  left: .35em;
+  right: .35em;
+}
+
+.resourceTitle {
+  font-family: var(--font-dm-sans-medium), sans-serif;
+  font-size: .7em;
+  line-height: 1.3;
+  font-weight: 500;
+  color: #000;
+}
+
+.description {
+  font-size: .4em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .resourcesGrid {
+    grid-template-columns: 1fr;
+  }
+}

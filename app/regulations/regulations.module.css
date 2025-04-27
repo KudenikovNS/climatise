@@ -1,0 +1,255 @@
+.about {
+  padding-block-start: 7rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: .5rem;
+}
+
+.header {
+  font-family: var(--font-dm-sans-medium), sans-serif;
+  font-weight: 500;
+  font-size: 2.2em;
+  line-height: 1.25;
+  overflow: hidden;
+}
+
+.text {
+  font-family: var(--font-inter-regular), sans-serif;
+  font-weight: 400;
+  font-size: 1.7vw;
+  letter-spacing: -.02em;
+}
+
+.btnAbout {
+  width: fit-content;
+  font-size: var(--font-size-s) !important;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+.leadership {
+  padding-block-start: 7rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: center;
+}
+
+.headerLeadership {
+  font-family: var(--font-dm-sans-medium), sans-serif;
+  font-weight: 500;
+  font-size: 2.2em;
+  line-height: 1.25;
+}
+
+.lineWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0.25em;
+}
+
+.grayChar {
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.coloredChar {
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.blueChar {
+  color: #0066cc;
+  transition: color 0.3s ease;
+}
+
+.runningText {
+  display: inline-block;
+  animation: runningTextAnimation 10s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes runningTextAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Стили для секции FAQ */
+.faqSection {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faqTitle {
+  font-family: var(--font-dm-sans-medium), sans-serif;
+  font-weight: 500;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.faqContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faqSection {
+  padding: 80px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.faqTitle {
+  font-size: 64px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #333;
+}
+
+.faqContainer {
+  margin: 0 auto;
+  background-image: linear-gradient(315deg, #f2f9ff, #f2fcff);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.faqItem {
+  padding-inline: .5rem;
+  padding-block: .2rem;
+  transition: all 0.3s ease;
+}
+
+.faqItem:last-child {
+  border-bottom: none;
+}
+
+.faqQuestion {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.faqQuestion:hover {
+  background-color: #ffffff;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.icon {
+  transition: transform 0.3s ease;
+  color: #333;
+  width: 16px;
+  height: 16px;
+}
+
+.iconOpen {
+  transform: rotate(180deg);
+}
+
+/* Стили для открытого вопроса */
+.faqItem.active .faqQuestion {
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.faqItem.active .answer {
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.faqItem.active .iconWrapper {
+  background-color: #0066ff;
+}
+
+.faqItem.active .icon {
+  color: #ffffff;
+}
+
+.question {
+  font-family: var(--font-inter-regular), sans-serif;
+  font-weight: 400;
+  font-size: 1.15em;
+  line-height: .9;
+}
+
+.answer {
+  font-family: var(--font-inter-medium), sans-serif;
+  font-weight: 500;
+  color: #4d4d4d;
+  font-size: .65em;
+
+  padding: 24px 32px;
+}
+
+.faqAnswer p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .faqTitle {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+  
+  .faqQuestion {
+    padding: 20px 24px;
+    font-size: 18px;
+  }
+  
+  .faqAnswer {
+    padding: 0 24px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faqSection {
+    padding: 60px 16px;
+  }
+  
+  .faqTitle {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  .faqQuestion {
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+  
+  .faqAnswer {
+    padding: 0 20px 16px;
+    font-size: 14px;
+  }
+}
