@@ -6,29 +6,29 @@ import { FaqItem } from '@/components/faq/faq';
 
 const regulationsItems = [
   {
-    question: '01. Poenostavljeno poročanje o energiji in ogljiku (SECR)',
-    answer: 'SECR zahteva od britanskih podjetij, da poročajo o porabi energije in emisijah ogljika.',
-    answer1: 'Climatise ta proces revolucionira s popolnoma avtomatiziranim potekom dela, ki v trenutku ustvari letno poročilo SECR, pripravljeno za oddajo in revizijo.'
+    question: '01. Direktiva o korporativnem poročanju o trajnostnem razvoju (CSRD)',
+    answer: 'CSRD uvaja celovite zahteve glede poročanja o trajnostnem razvoju za podjetja v EU.',
+    answer1: 'Climatise poenostavlja celoten postopek zbiranja podatkov, tudi za kompleksne zahteve Skopa 3, s čimer zagotavlja popolno pokritost podatkov. V nekaj sekundah ustvarite natančna, pripravljena za revizijo poročila, ki popolnoma ustrezajo evropskim standardom poročanja o trajnostnem razvoju (ESRS).'
+  },
+  { 
+    question: '02. Evropski standardi poročanja o trajnostnem razvoju (ESRS)',
+    answer: 'ESRS nudi podroben okvir poročanja znotraj CSRD.',
+    answer1: 'Platforma Climatise je popolnoma usklajena z vsemi zahtevami ESRS, kar omogoča nemoteno razkrivanje okoljskih, družbenih in upravljavskih metrik. Naša rešitev samodejno preslika vaše podatke na ustrezna ESRS razkritja, kar poenostavlja skladnost.'
   },
   {
-    question: '02. Mednarodni svet za standarde trajnostnega razvoja (ISSB)',
-    answer: 'ISSB postavlja globalne standarde za finančna razkritja, povezana s trajnostnim razvojem. Climatise nudi celovito podporo za poročanje po ISSB, kar omogoča nemoteno vključevanje informacij o trajnostnem razvoju v vaše finančno poročanje.',
-    answer1: 'Naša platforma zagotavlja, da ste vedno usklajeni z najnovejšimi zahtevami ISSB, s čimer deležnikom nudite zahtevano preglednost.'
+    question: '03. Taksonomija EU',
+    answer: 'Taksonomija EU določa merila za okoljsko trajnostne gospodarske dejavnosti.',
+    answer1: 'Climatise vam pomaga določiti upravičenost in skladnost s taksonomijo, avtomatizira kompleksne izračune ter ustvarja podrobno dokumentacijo za podporo vašim trditvam o zelenih naložbah in preprečevanje greenwashinga.'
   },
   {
-    question: '03. Direktiva o korporativnem poročanju o trajnostnem razvoju (CSRD)',
-    answer: 'CSRD razširja zahteve za poročanje o trajnostnem razvoju pri podjetjih v EU.',
-    answer1: 'Climatise poenostavlja zbiranje podatkov, tudi za kompleksne zahteve Scope 3, s čimer zagotavlja celovitost podatkov. V nekaj sekundah prejmete natančna poročila, pripravljena na revizijo.'
+    question: '04. Mednarodni svet za standarde trajnostnega razvoja (ISSB)',
+    answer: 'ISSB postavlja globalne standarde za finančna razkritja, povezana s trajnostnim razvojem.',
+    answer1: 'Climatise nudi celovito podporo za poročanje po ISSB, kar vam pomaga nemoteno vključiti informacije o trajnostnem razvoju v vaše finančno poročanje. Naša platforma zagotavlja, da ste vedno usklajeni z najnovejšimi zahtevami ISSB, s čimer deležnikom nudite zahtevano preglednost.'
   },
   {
-    question: '04. Britanske zahteve za razkritje trajnostnih informacij (SDR)',
-    answer: 'Čeprav so britanske zahteve SDR še v razvoju, je Climatise pripravljen podpreti vaše potrebe po skladnosti takoj, ko bo okvir dokončan.',
-    answer1: 'Naša prilagodljiva platforma bo vključila zahteve SDR, s čimer boste vedno korak pred drugimi pri poročanju o trajnostnem razvoju.'
-  },
-  {
-    question: '05. Poročanje ESOS',
-    answer: 'ESOS obvezuje velika britanska podjetja k oceni porabe energije in prepoznavanju priložnosti za prihranke.',
-    answer1: 'Climatise poenostavlja skladnost z ESOS z avtomatiziranim zbiranjem podatkov in takojšnjimi poročili, pripravljenimi za revizijo, ter pretvarja regulatorne zahteve v uporabne vpoglede za energetsko učinkovitost in prihranke.'
+    question: '05. Uredba o razkritju trajnostnih finančnih informacij (SFDR)',
+    answer: 'SFDR zahteva, da udeleženci finančnih trgov razkrijejo tveganja in vplive, povezane s trajnostnim razvojem.',
+    answer1: 'Climatise poenostavlja skladnost s SFDR z avtomatiziranim zbiranjem podatkov in standardiziranimi predlogami za razkritja, kar vam učinkovito pomaga izpolniti zahteve za poročanje o glavnih negativnih vplivih (PAI).'
   }
 ];
 
@@ -131,8 +131,8 @@ export default function RegulationsPage() {
         </h1>
       </div>
 
-      <section className={styles.faqSection}>
-      <h2 className={styles.faqTitle}>Predpisi</h2>
+      <section className={styles.faq}>
+      <h2 className={styles.title}>Predpisi</h2>
       <div className={styles.faqContainer}>
         {regulationsItems.map((item, index) => (
           <FaqItem 
