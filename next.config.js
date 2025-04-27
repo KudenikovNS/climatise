@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: '/climatise',
+  assetPrefix: '/climatise/',
+
   webpack(config) {
-    // Настройка для SVG файлов
     config.module.rules.push({
       test: /\.svg$/,
       issuer: /\.[jt]sx?$/,

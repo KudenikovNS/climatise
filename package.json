@@ -1,12 +1,15 @@
 {
   "name": "climatase",
+  "homepage": "https://KudenikovNS.github.io/climatise",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build && npm run export",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "next": "15.2.3",
@@ -22,6 +25,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.3",
+    "gh-pages": "^6.3.0",
     "prettier": "3.5.3",
     "typescript": "^5"
   }
