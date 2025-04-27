@@ -6,7 +6,7 @@ import styles from './faq.module.css';
 interface FaqItemProps {
   question: string;
   answer: string;
-  answer1?: string; // Опциональное второе описание
+  answer1?: string;
 }
 
 const FaqItem: React.FC<FaqItemProps> = ({ question, answer, answer1 }) => {
@@ -14,25 +14,25 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer, answer1 }) => {
 
   return (
     <div className={`${styles.faqItem} ${isOpen ? styles.active : ''}`}>
-      <button 
-        className={styles.faqQuestion} 
+      <button
+        className={styles.faqQuestion}
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
       >
         <span className={styles.question}>{question}</span>
         <div className={styles.iconWrapper}>
-          <svg 
-            width="24" 
-            height="24" 
-            viewBox="0 0 24 24" 
-            fill="none" 
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
             className={`${styles.icon} ${isOpen ? styles.iconOpen : ''}`}
           >
-            <path 
-              d="M6 9L12 15L18 9" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
+            <path
+              d="M6 9L12 15L18 9"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
               strokeLinejoin="round"
             />
           </svg>
@@ -77,14 +77,14 @@ const FAQ: React.FC = () => {
   ];
 
   return (
-    <section className={styles.faqSection}>
-      <h2 className={styles.faqTitle}>Pogosta vprašanja</h2>
+    <section className={styles.faq}>
+      <h2 className={styles.title}>Pogosta vprašanja</h2>
       <div className={styles.faqContainer}>
         {faqItems.map((item, index) => (
-          <FaqItem 
-            key={index} 
-            question={item.question} 
-            answer={item.answer} 
+          <FaqItem
+            key={index}
+            question={item.question}
+            answer={item.answer}
           />
         ))}
       </div>
