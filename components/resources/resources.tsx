@@ -53,8 +53,8 @@ export default function Resources() {
                   className={styles.resourceImage}
                 />
                 <div className={styles.badges}>
-                  <span className={styles.typeBadge}>{resource.type}</span>
-                  <span className={styles.timeBadge}>{resource.readTime}</span>
+                  <span className={styles.badge}>{resource.type}</span>
+                  <span className={styles.badge}>{resource.readTime}</span>
                 </div>
                 <div className={styles.content}>
                   <h3 className={styles.resourceTitle}>{resource.title}</h3>
