@@ -36,7 +36,7 @@ export default function Footer() {
           <h3 className={styles.heading}>Contact</h3>
           <div className={styles.contact}>
             <Button text="+386 316 943 24" variant="primary" />
-            <Button text="hello@climatise.com" variant="primary" />
+            <Button text="info@climatise.si" variant="primary" />
           </div>
         </div>
       </div>
