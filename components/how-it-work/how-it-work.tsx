@@ -72,6 +72,7 @@ export default function HowItWork() {
                           <p className={styles.cardDesc}>{step.description}</p>
                         </div>
                       </div>
+                      <div className={styles.imgContainer}>
                       <Image
                         src={step.image}
                         width={476}
@@ -80,6 +81,7 @@ export default function HowItWork() {
                         className={styles.img}
                         priority
                       />
+                      </div>
                     </>
                   )}
                 </div>

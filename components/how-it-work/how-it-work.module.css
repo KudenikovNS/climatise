@@ -85,12 +85,12 @@
     width: 376px;
     height: 300px;
   }
-  @media (width <= 1024) {
+  @media (width <= 1024px) {
     width: 276px;
     height: 200px;
   }
 
-  @media (width <= 768) {
+  @media (width <= 768px) {
     display: none;
   }
 }
