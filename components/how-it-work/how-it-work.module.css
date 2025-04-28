@@ -15,7 +15,6 @@
 
 .title {
   color: #000;
-  letter-spacing: -.01em;
   font-family: var(--font-dm-sans-medium), sans-serif;
   font-size: 4em;
   line-height: 1.5;
@@ -31,7 +30,7 @@
   max-width: 100%;
   border-radius: 5%;
 
-  @media (width <= 768) {
+  @media (width <= 768px) {
     max-width: 80%;
   }
 }
@@ -45,7 +44,6 @@
 }
 
 .content {
-
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
@@ -54,7 +52,7 @@
   border-radius: 1.17em;
   padding: 2rem 0;
 
-  @media (width <= 768) {
+  @media (width <= 768px) {
     padding-top: 1rem;
     padding-bottom: 0;
   }
@@ -69,11 +67,11 @@
   position: relative;
   margin-bottom: 2rem;
 
-  @media (width <= 1024) {
+  @media (width <= 1024px) {
     min-height: 200px;
   }
 
-  @media (width <= 768) {
+  @media (width <= 768px) {
     min-height: 70px;
   }
 }
