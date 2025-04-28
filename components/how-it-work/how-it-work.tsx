@@ -48,7 +48,7 @@ export default function HowItWork() {
                   {step.imageFirst ? (
                     <>
                       <Image
-                        src={`${process.env.NODE_ENV === 'production' ? '/climatise' : ''}${step.image}`}
+                        src={step.image}
                         width={476}
                         height={400}
                         alt={`Step ${step.number}`}
@@ -73,7 +73,7 @@ export default function HowItWork() {
                         </div>
                       </div>
                       <Image
-                        src={`${process.env.NODE_ENV === 'production' ? '/climatise' : ''}${step.image}`}
+                        src={step.image}
                         width={476}
                         height={400}
                         alt={`Step ${step.number}`}
