@@ -36,21 +36,21 @@ export default function HeroBlock() {
             className={styles.scopeImage}
           />
           <Image
-            src="/analytics/scope2.jpg"
+            src={`${process.env.NODE_ENV === 'production' ? '/climatise' : ''}/analytics/scope2.jpg`}
             width={332}
             height={148}
             alt="Scope 2 Analytics"
             className={styles.scopeImage}
           />
           <Image
-            src="/analytics/scope3.jpg"
+            src={`${process.env.NODE_ENV === 'production' ? '/climatise' : ''}/analytics/scope3.jpg`}
             width={332}
             height={148}
             alt="Scope 3 Analytics"
             className={styles.scopeImage}
           />
           <Image
-            src="/analytics/progress.png"
+            src={`${process.env.NODE_ENV === 'production' ? '/climatise' : ''}/analytics/progress.png`}
             width={235}
             height={317}
             alt="Progress"
@@ -60,14 +60,14 @@ export default function HeroBlock() {
 
         <div className={styles.rightColumn}>
           <Image
-            src="/analytics/graph.svg"
+            src={`${process.env.NODE_ENV === 'production' ? '/climatise' : ''}/analytics/graph.svg`}
             width={478}
             height={296}
             alt="Graph"
             className={styles.graphImage}
           />
           <Image
-            src="/analytics/show.svg"
+            src={`${process.env.NODE_ENV === 'production' ? '/climatise' : ''}/analytics/show.svg`}
             width={212}
             height={467}
             alt="Show"

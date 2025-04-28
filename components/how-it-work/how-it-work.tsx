@@ -9,28 +9,28 @@ export default function HowItWork() {
       number: 1,
       title: "Naložite svoje podatke",
       description: "Surove podatke naložite v Climatise, brez predlog, brez ročnega oblikovanja – preprosto povlecite in spustite svoje surove poslovne podatke.",
-      image: "/img/folder.avif",
+      image: `${process.env.NODE_ENV === 'production' ? '/climatise' : ''}/img/folder.avif`,
       imageFirst: true
     },
     {
       number: 2,
       title: "Izračunajte svoje emisije",
       description: "Climatise takoj izračuna vaše emisije in vam zagotovi pregled nad vašim ogljičnim odtisom v realnem času.",
-      image: "/img/diagrams.png",
+      image: `${process.env.NODE_ENV === 'production' ? '/climatise' : ''}/img/diagrams.png`,
       imageFirst: false
     },
     {
       number: 3,
       title: "Zmanjšajte svoje emisije",
       description: "Climatise zagotavlja na podatkih temelječe strategije za zmanjšanje emisij za vaše podjetje. Modelirajte, napovedujte in spremljajte napredek glede vaših ciljev.",
-      image: "/img/cloud.avif",
+      image: `${process.env.NODE_ENV === 'production' ? '/climatise' : ''}/img/cloud.avif`,
       imageFirst: true
     },
     {
       number: 4,
       title: "Poročajte o svojih emisijah",
       description: "Izkoristite Climatiseove avtomatizirane procese poročanja. Od četrtletnih posodobitev do regulativnih zahtev – poročajte o svojih emisijah takoj.",
-      image: "/img/stikers.avif",
+      image: `${process.env.NODE_ENV === 'production' ? '/climatise' : ''}/img/stikers.avif`,
       imageFirst: false
     }
   ];
@@ -48,7 +48,7 @@ export default function HowItWork() {
                   {step.imageFirst ? (
                     <>
                       <Image
-                        src={step.image}
+                        src={`${process.env.NODE_ENV === 'production' ? '/climatise' : ''}${step.image}`}
                         width={476}
                         height={400}
                         alt={`Step ${step.number}`}
@@ -73,7 +73,7 @@ export default function HowItWork() {
                         </div>
                       </div>
                       <Image
-                        src={step.image}
+                        src={`${process.env.NODE_ENV === 'production' ? '/climatise' : ''}${step.image}`}
                         width={476}
                         height={400}
                         alt={`Step ${step.number}`}

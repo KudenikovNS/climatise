@@ -92,7 +92,7 @@ export default function PlatformImg() {
           <div className={styles.content}>
             <div ref={imgContainerRef} className={styles.imgContainer}>
               <Image
-                src="/platform/platform.png"
+                src={`${process.env.NODE_ENV === 'production' ? '/climatise' : ''}/platform/platform.png`}
                 width={1086}
                 height={717}
                 alt="Platform"

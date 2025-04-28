@@ -18,7 +18,7 @@ export default function Resources() {
               <Link href={resource.url}>
               <div className={styles.imageContainer}>
                 <Image
-                  src={resource.image}
+                  src={`${process.env.NODE_ENV === 'production' ? '/climatise' : ''}${resource.image}`}
                   alt={resource.title}
                   fill
                   className={styles.resourceImage}

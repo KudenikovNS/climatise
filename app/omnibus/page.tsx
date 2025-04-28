@@ -10,7 +10,7 @@ export default function OmnibusPage() {
           <h1 className={styles.title}>The Omnibus Simplification to CSRD: A Step Forward or a Step Back?</h1>
           <div></div>
           <Button />
-          <Image src="/img/resource1.jpg" alt="Omnibus" width={1086} height={717} />
+          <Image src={`${process.env.NODE_ENV === 'production' ? '/climatise' : ''}/img/resource1.jpg`} alt="Omnibus" width={1086} height={717} />
         </div>
 
         <div className={styles.article}>
