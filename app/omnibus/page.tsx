@@ -1,3 +1,5 @@
+"use client";
+
 import Button from '@/components/button/button';
 import styles from './about.module.css';
 import Image from 'next/image';
@@ -8,14 +10,18 @@ export default function OmnibusPage() {
       <div className={styles.content}>
         <div className={styles.header}>
           <h1 className={styles.title}>The Omnibus Simplification to CSRD: A Step Forward or a Step Back?</h1>
-          <div></div>
-          <Button />
+          <div className={styles.line}></div>
+          <div className={styles.btnAbout}>
+            <Button />
+          </div>
           <Image src={`${process.env.NODE_ENV === 'production' ? '/climatise' : ''}/img/resource1.jpg`} alt="Omnibus" width={1086} height={717} />
         </div>
 
         <div className={styles.article}>
-          <h1 className={`${styles.title} ${styles.paragraphTitleMain}`}>The Omnibus Simplification to CSRD: A Step Forward or a Step Back?</h1>
-          <p className={styles.paragraphText}>Ko se podjetja in oblikovalci politik po vsej Evropski uniji soočajo z nenehno spreminjajočim se okvirom okoljskih, družbenih in upravljavskih (ESG) predpisov, je predlagana Omnibus poenostavitev Direktive o korporativnem poročanju o trajnostnem razvoju (CSRD) sprožila strastne razprave. Obljubljena kot panaceja za zapletene zahteve skladnosti, je ta zakonodajna prenova razdelila podjetja in deležnike. Je Omnibus poenostavitev res jasnost, ki jo industrija potrebuje, ali tvegа, da bo omajala cilje, za katere je bila zasnovana?</p>
+          <div className={styles.paragraph}>
+            <h1 className={`${styles.title} ${styles.paragraphTitleMain}`}>The Omnibus Simplification to CSRD: A Step Forward or a Step Back?</h1>
+            <p className={styles.paragraphText}>Ko se podjetja in oblikovalci politik po vsej Evropski uniji soočajo z nenehno spreminjajočim se okvirom okoljskih, družbenih in upravljavskih (ESG) predpisov, je predlagana Omnibus poenostavitev Direktive o korporativnem poročanju o trajnostnem razvoju (CSRD) sprožila strastne razprave. Obljubljena kot panaceja za zapletene zahteve skladnosti, je ta zakonodajna prenova razdelila podjetja in deležnike. Je Omnibus poenostavitev res jasnost, ki jo industrija potrebuje, ali tvegа, da bo omajala cilje, za katere je bila zasnovana?</p>
+          </div>
           <div className={styles.paragraph}>
             <p className={styles.paragraphTitle}>
               Razumevanje Omnibus poenostavitve

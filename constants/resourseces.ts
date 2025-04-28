@@ -15,7 +15,7 @@ export const resources = [
     type: "Članek",
     readTime: "5 min",
     image: "/img/resource2.jpg",
-    url: "#"
+    url: "/carbon"
   },
   {
     id: 3,
@@ -24,6 +24,6 @@ export const resources = [
     type: "Članek",
     readTime: "10 min",
     image: "/img/resource3.jpg",
-    url: "#"
+    url: "/reporting"
   }
 ];
