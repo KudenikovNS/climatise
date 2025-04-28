@@ -29,7 +29,7 @@ export default function HeroBlock() {
       <div className={styles.analyticsContainer}>
         <div className={styles.leftColumn}>
           <Image
-            src="/analytics/scope1.jpg"
+            src={`${process.env.NODE_ENV === 'production' ? '/climatise' : ''}/analytics/scope1.jpg`}
             width={332}
             height={148}
             alt="Scope 1 Analytics"

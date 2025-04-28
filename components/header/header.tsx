@@ -7,8 +7,6 @@ import { useState, useEffect } from "react";
 import Button from "../button/button";
 import { navItems } from "@/constants/navigation";
 
-import logo from "@/public/icon/logo.svg";
-
 export function Header() {
   const [activePath, setActivePath] = useState("");
   const [scrolled, setScrolled] = useState(false);
@@ -47,10 +45,10 @@ export function Header() {
       <div className={styles.container}>
         <Link href="/" className={styles.link}>
           <Image
-            src={logo}
-            alt="Domov"
-            width={111}
-            height={31}
+            src={`${process.env.NODE_ENV === 'production' ? '/climatise' : ''}/icon/logo.svg`}
+            alt="Domov" 
+            width={111} 
+            height={31} 
           />
         </Link>
 
