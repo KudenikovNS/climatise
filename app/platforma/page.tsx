@@ -69,7 +69,7 @@ export default function PlatformPage() {
 
   return (
     <section className={styles.platform}>
-      <h1 className={styles.header}>Platform</h1>
+      <h1 className={styles.header}>Platforma</h1>
 
       <div className={styles.cards}>
         {cardsInfo.map((item) => (
