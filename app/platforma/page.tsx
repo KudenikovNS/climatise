@@ -1,7 +1,7 @@
 'use client';
 
 import FAQ from '@/components/faq/faq';
-import styles from './platform.module.css';
+import styles from './platforma.module.css';
 import Image from 'next/image';
 import { useState } from 'react';
 
